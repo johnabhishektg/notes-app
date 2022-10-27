@@ -1,38 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  padding: 10px 15%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark-theme.App {
+  background-color: black;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark-theme h1 {
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HEADER */
+
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-btn {
+  font-size: 12px;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* SEARCH */
+
+.search {
+  margin-top: 15px;
+  background-color: #e8e8e8;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  width: 150px;
+  background-color: inherit;
+  padding-left: 6px;
+  align-items: center;
+}
+
+.search-ico {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* NOTES */
+
+.notes {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note {
+  background-color: #f1f577;
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+.note-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.note-btm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+.date {
+  font-size: 15px;
+}
+
+.trash-ico {
+  cursor: pointer;
+}
+
+/* adding note section */
+.add-note {
+  background-color: #77f5da;
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+textarea {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+
+textarea::placeholder {
+  font-weight: normal;
+  color: #898989;
+  font-size: 1rem;
+}
+
+.char {
+  font-size: 0.9rem;
+}
+
+.save-btn {
+  border: none;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 620px) {
+  .App {
+    padding: 10px 25%;
   }
-  to {
-    transform: rotate(360deg);
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .search {
+    width: 200px;
+  }
+
+  .add-note,
+  .note {
+    margin: 15px 0;
   }
 }
